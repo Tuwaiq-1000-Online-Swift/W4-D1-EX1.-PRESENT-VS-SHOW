@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func buttonClicked(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC")
+        if let viewCont = vc {
+            navigationController?.pushViewController(viewCont, animated: true)
+        }
+        
+    }
+    
 }
 
